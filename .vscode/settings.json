@@ -1,0 +1,16 @@
+{
+    "java.test.config": [
+        {
+            "name": "myConfiguration",
+            "workingDirectory": "${workspaceFolder}",
+            "vmargs": [
+                "-Xmx512M"
+            ],
+            "env": {
+                "key": "value"
+            },
+        },
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic"
+}

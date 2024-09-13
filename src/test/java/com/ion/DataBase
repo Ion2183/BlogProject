@@ -1,0 +1,12 @@
+CREATE TABLE password (
+    plaform VARCHAR(50),
+    username VARCHAR(50) PRIMARY KEY,
+    userpassword　VARCHAR(100)
+);
+
+
+CREATE TABLE password (
+  plaform VARCHAR(50),
+    username VARCHAR(50) PRIMARY KEY,
+     userpassword VARCHAR(100)
+);

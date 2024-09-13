@@ -1,0 +1,37 @@
+<html lang="en">
+    <head>   <meta charset="utf-8"></head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+
+    $(function () {
+        $.ajax({
+            url: "http://127.0.0.1:8080/project-1.0/getAllArticles",
+            type: "GET",
+            dataType: "json",
+        })
+        .done(function (data) {
+            // success
+            //取得jsonデータ
+            var data_stringify = JSON.stringify(data);
+            var data_json = JSON.parse(data_stringify);
+            //jsonデータから各データを取得
+            var data_id = data_json[2]["id"];
+            var data_title = data_json[2]["title"];
+            //出力
+            $("#id").text(data_id);
+            $("#title").text(data_title);
+          }) 
+            .fail(function (data) {
+                // error
+                console.log("error");
+            });
+    });
+</script>
+
+<body>
+    <p>id：<span id="id"></span></p>
+    <p>title：<span id="title"></span></p>
+
+</body>
+
+</html>
